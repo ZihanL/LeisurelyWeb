@@ -1,34 +1,62 @@
 body {
     font-family: "Montserrat";
+    text-align: center;
 }
 
-h1 {
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Montserrat";
+    font-weight: 700; /*bold*/
+}
+
+.container-fluid {
+    padding: 7% 15%; /*top,bottom; left,right*/
+}
+
+.colored-background {
+    background-color: #ef8172;
+    color: #fff;
+}
+
+.white-background {
+    background-color: #fff;
+
+}
+
+/* Heading */
+.big-heading {
     font-family: "Montserrat Black";
     font-size: 3.25rem;
     line-height: 1.5
 }
 
-h2 {
-    font-family: "Montserrat";
-    font-size: 2rem;
-    font-weight: 700; /*bold*/
+.section-title{
+    font-size: 1.9rem;
     line-height: 1.5;
+    margin-bottom: 5%;
 }
 
-h3 {
-    font-family: "Montserrat";
-    font-size: 1.5rem;
-    font-weight: 700; /*bold*/
+
+/*Download buttons */
+.download-btn {
+    margin: 8% 3% 5% 0; /* top right bottom left*/
 }
 
-.container-fluid {
-    padding: 3% 15%;
+.download-btn2 {
+    margin: 5% 5% 0 0; /* top right bottom left*/
 }
 
-#title {
+.download-btn3 {
+    margin: 5% 0 0; /* top right bottom left*/
+}
+
+
+/* Title section*/
+#title .container-fluid{ /*Hierarchical selectors */
+    padding: 3% 15% 7%;
     background-color: #ff4c68;
-    color: #fff;
+    text-align: left;
 }
+
 
 /* Navigation bar */
 .navbar {
@@ -50,25 +78,25 @@ h3 {
     font-size: 1.1rem;
 }
 
-/*Download buttons */
-
-.download-btn {
-    margin: 8% 3% 5% 0; /* top right bottom left*/
-}
-
 /*Title Image*/
 .title-image {
-    transform: rotate(20deg);
-    width: 65%;
+    transform: rotate(18deg);
+    width: 19%;
+    position: absolute;
+    right: 22%;
 }
 
-/*Features*/
+/*Features section*/
 #features {
-    padding: 7% 14%; /*top,bottom; left,right*/
+    position: relative;
+    z-index: 1; /*could be removed*/
+}
+
+.features-subtitle {
+    font-size: 1.5rem;
 }
 
 .features-box {
-    text-align: center;
     padding: 4%;
 }
 
@@ -85,17 +113,15 @@ p{
     color: #8f8f8f;
 }
 
-/* designs */
-#designs-objective {
-    padding: 7% 14% 0 14%;
-    background-color: #ef8172;
-    color: #fff;
-    text-align: center;
+/* Designs section */
+.objective-text {
+    font-size: 1.9rem;
+    line-height: 1.5;
 }
 
 .comments-box {
     text-align: left;
-    padding: 5%;
+    padding: 5% 5% 0%; /*top left-right bottom */
 }
 
 .comments-host {
@@ -105,10 +131,6 @@ p{
 
 /*designs carousel */
 #designs {
-    background-color: #ef8172;
-    color: #fff;
-    text-align: center;
-    padding-top: 2%;
     padding-bottom: 7%;
 }
 
@@ -122,7 +144,7 @@ p{
 }
 
 .carousel-inner {
-    padding: 0 14%;
+    padding: 0 15%;
 }
 
 .second-item {
@@ -133,21 +155,41 @@ p{
     width: 20%
 }
 
-/* demo section */
+/* Demo section */
 #demos {
-    text-align: center;
 }
 
-/* team section */
+/* Team section */
 #team {
-    background-color: #ef8172;
-    color: #fff;
-    text-align: center;
 }
 
-/* footer */
+/* Call to Action section */
+#cta {
+    color: #ef8172;
+}
+
+/* Footer */
 #footer {
-    padding: 7% 14%;
-    text-align: center;
+    background-color: #ff4c68;
+}
+
+#footer p{
+    color:#fff;
+}
+
+.social-icons {
+    margin: 20px;
+}
+
+/*responsive design for mobile devices */
+@media (max-width: 992px) {
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        position: static;
+        transform: rotate(0);
+        width: 50%;
+    }
 }
 
